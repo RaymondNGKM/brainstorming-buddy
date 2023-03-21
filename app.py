@@ -116,7 +116,7 @@ st.markdown(
 )
 if input_text:
     # checking the value of output
-    st.write(st.session_state.output)
+    # st.write(st.session_state.output)
 	
     prompt = "Brainstorm ideas for "+str(input_text)
     if prompt:
