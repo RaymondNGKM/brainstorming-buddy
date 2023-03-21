@@ -123,7 +123,7 @@ if input_text:
         
         st.info(brainstorming_output)
         filename = "brainstorming_"+str(today)+".txt"
-	st.session_state.output
+	st.write(st.session_state.values())
         btn = st.download_button(
             label="Download txt",
             data=topic,
