@@ -113,6 +113,7 @@ st.markdown(
     unsafe_allow_html=True,
 )
 if input_text:
+    st.write(st.session_state.values())
     prompt = "Brainstorm ideas for "+str(input_text)
     if prompt:
         openai.api_key = st.secrets["openai_api_key"]
@@ -123,7 +124,6 @@ if input_text:
         
         st.info(brainstorming_output)
         filename = "brainstorming_"+str(today)+".txt"
-	st.write(st.session_state.values())
         btn = st.download_button(
             label="Download txt",
             data=topic,
