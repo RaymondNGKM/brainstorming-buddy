@@ -113,7 +113,7 @@ st.markdown(
     unsafe_allow_html=True,
 )
 if input_text:
-    st.write(st.session_state.values())
+    st.write(st.session_state.output)
     prompt = "Brainstorm ideas for "+str(input_text)
     if prompt:
         openai.api_key = st.secrets["openai_api_key"]
