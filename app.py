@@ -47,6 +47,8 @@ if st.session_state['output'] <=2:
     """)
     input_text = st.text_input("Brainstorm ideas for", disabled=False, placeholder="What's on your mind?")
     st.session_state['output'] = st.session_state['output'] + 1
+    # check the value output
+    st.write(st.session_state.output)
 else:
     # input_text = st.text_input("Brainstorm ideas for", disabled=True)
     st.info("Thank you! Refresh for more brainstorming💡")
@@ -113,7 +115,9 @@ st.markdown(
     unsafe_allow_html=True,
 )
 if input_text:
+    # checking the value of output
     st.write(st.session_state.output)
+	
     prompt = "Brainstorm ideas for "+str(input_text)
     if prompt:
         openai.api_key = st.secrets["openai_api_key"]
